@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<breakfast_menu>
+	<food>
+		<name>Ceasar salad</name>
+		<price>130</price>
+		<ingradients>tomatoes, onion, cucumber, egg</ingradients>
+    </food>
+	<food>
+		<name>Hamburger</name>
+		<price>150</price>
+		<ingradients>buns, onion, beef, side salad, pickle</ingradients>
+	</food>
+</breakfast_menu>

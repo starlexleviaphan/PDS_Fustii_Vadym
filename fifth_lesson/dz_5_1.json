@@ -1,0 +1,28 @@
+{
+  "menu":
+          [
+            {
+              "name": "Ceasar salad",
+              "prise": "130",
+              "ingradients": [
+                "tomatoes",
+                "onion",
+                "cucumber",
+                "egg"
+              ]
+
+            },
+            {
+              "name": "Hamburger",
+              "prise": "150",
+              "ingradients": [
+                "buns",
+                "onion",
+                "beef",
+                "side salad",
+                "pickle"
+              ]
+
+            }
+          ]
+}
