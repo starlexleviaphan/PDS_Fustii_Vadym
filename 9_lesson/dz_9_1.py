@@ -12,3 +12,11 @@ class Auto():
 car1 = Auto("Citroen", "maroon", 1.6)
 car1.forvard()
 car1.backwards()
+
+class Auto2(Auto):
+    @staticmethod
+    def turn_left():
+        print("turn left")
+    @staticmethod
+    def turn_right():
+        print("turn right")
