@@ -12,4 +12,4 @@ def month(num):
     except Exception as ex:
         print("You did something wrong :)")
 
-print(month())
+print(month(13))
