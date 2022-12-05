@@ -19,6 +19,5 @@ while True:
     else: ansv = str(input())
     conn.send(bytes(str(ansv), encoding="UTF-8"))
     socket.listen(10)
-    a.append(str(data))
 
 conn.close()

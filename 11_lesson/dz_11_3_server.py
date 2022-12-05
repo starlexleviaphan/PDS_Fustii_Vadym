@@ -10,15 +10,12 @@ print("connected:", addr) # Обмін повідомленнями можлив
 while True:
 
     data = conn.recv(1024)
-    print(str(bytes(data)))
+    # print(str(bytes(data)))
+    a = bytes(data).decode("utf-8")
+    print(a)
+    ansv = len(a.split())
 
-    if str(bytes(data)) == "b'test'": # first key phrase
-        ansv = "it`s test ansver"
-    elif str(bytes(data)) == "b'byte me'": # second key phrase
-        ansv = "Ha ha ha, you wish :)"
-    else: ansv = str(input())
     conn.send(bytes(str(ansv), encoding="UTF-8"))
     socket.listen(10)
-    a.append(str(data))
 
 conn.close()
