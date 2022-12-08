@@ -6,5 +6,5 @@ while True:
 
     socket.send(bytes(str(input()), encoding="UTF-8"))
     data = socket.recv(1024)
-    print(data)
+    print(data.decode("utf-8"))
 socket.close()
