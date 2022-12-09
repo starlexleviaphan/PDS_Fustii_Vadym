@@ -1,29 +1,19 @@
 import asyncio
 
-
-async def sum(a, b):
-    # return a + b
-    ans = a + b
+async def foo():
+    print('Running in foo')
     await asyncio.sleep(0)
-    print(ans)
+    print('Explicit context switch to foo again')
 
-async def sub(a, b):
-    ans = a - b
-    await asyncio.sleep(0)
-    print(ans)
 
-async def div(a, b):
-    ans = a / b
+async def bar():
+    print('Explicit context to bar')
     await asyncio.sleep(0)
-    print(ans)
+    print('Implicit context switch back to bar')
 
-async def mul(a, b):
-    ans = a * b# return a * b
-    await asyncio.sleep(0)
-    print(ans)
-a = 21
-b = 45
+
 ioloop = asyncio.get_event_loop()
-tasks = [ioloop.create_task(sum(a, b)), ioloop.create_task(sub(a, b)), ioloop.create_task(div(a, b)), ioloop.create_task(mul(a, b))]
-ioloop.run_until_complete(asyncio.wait((tasks)))
+tasks = [ioloop.create_task(foo()), ioloop.create_task(bar())]
+wait_tasks = asyncio.wait(tasks)
+ioloop.run_until_complete(wait_tasks)
 ioloop.close()
