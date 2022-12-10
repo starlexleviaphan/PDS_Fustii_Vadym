@@ -1,5 +1,5 @@
 import random
-# from py_random_words import RandomWord
+from random_words import RandomWords
 
 
 int_list = []
@@ -8,10 +8,10 @@ str_list = []
 
 int_list = [random.randint(0, 1000) for a in range(5000)]
 float_list = [random.uniform(0.1, 100) for a in range(5000)]
-
-# rnd_word = RandomWords()
+rw = RandomWords()
+str_list = rw.random_words(count=5000)
 #
-# print(rnd_word.get_word())
+print(str_list)
 print(int_list)
-
 print(float_list)
+
