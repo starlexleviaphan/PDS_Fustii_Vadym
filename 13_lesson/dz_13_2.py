@@ -90,7 +90,7 @@ def sort_meter(data, iterations):                                           #tim
         timer.append(interval)
     return mean(timer)
 
-avg_time = sort_meter(str_list, 9)
+avg_time = sort_meter(str_list, 100)
 print("avg time = {}".format(avg_time))
 
 # t1 = time.time()
